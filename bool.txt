@@ -1,0 +1,12 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        boolean[] bool  = {false, true};
+        System.out.println("Implikacja- jezeli p, to q");
+        System.out.println("p\tw\tp");
+        for(boolean p: bool)
+            for(boolean q: bool)
+            
+            System.out.println(p+"\t" + q +"\t" +(Boolean.valueOf(p). compareTo(q)<1));
+            System.out.println();
+    }
+}
