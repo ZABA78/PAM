@@ -1,0 +1,22 @@
+public class PrawaDeMorgana {
+    public static void main(String args[]){
+        boolean[] bool = {false, true};
+        System.out.println("Zaprzeczenie koniukcji jest równoważne alternatywie zaprzeczeń");
+        System.out.println("p\tq\tp&&q\t!(p&&q)\t!p\t!q\t!p||!q\t!(p&&q)<=>(!p||!q)");
+        for(boolean p: bool)
+            for(boolean q: bool){
+                System.out.println(p+"\t"+q+"\t"+(p&&q)+"\t"+!(p&&q));
+                System.out.println(!p+"\t"+!q+"\t"+(!p||!q));
+                System.out.println("\t"+(!(p&&q)==(!p||!q)));
+            }
+        System.out.println("\n");
+        System.out.println("Zaprzeczenie koniukcji jest równoważne koniukcji zaprzeczeń");
+        System.out.println("p\tq\tp||q\t!(p||q)\t!p\t!q\t!p||!q\t!(p||q)<=>(!p&&!q)");
+        for(boolean p: bool)
+            for(boolean q: bool){
+                System.out.println(p+"\t"+q+"\t"+(p||q)+"\t"+!(p||q));
+                System.out.println(!p+"\t"+!q+"\t"+(!p&&!q));
+                System.out.println("\t"+(!(p||q)==(!p&&!q)));
+            }
+    }
+}
