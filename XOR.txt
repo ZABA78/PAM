@@ -1,0 +1,18 @@
+public class Main {
+
+    public static void main(String[] args) {
+     boolean[] bool = {false, true};
+     System.out.println("Operator alternatywny wykluczajacej (XOR) = ^");
+     System.out.println("p\t q\tp ^ q");
+     for(boolean p: bool)
+         for(boolean q: bool)
+             System.out.println(p+"\t" +q+"\t"+(p^q));
+     System.out.println();
+     System.out.println("Opearator nie jest równe - !=");
+     System.out.println("[\t q\tp != q");
+        for(boolean p: bool)
+            for(boolean q: bool)
+                System.out.println(p+"\t" + q +"\t"+(p!=q));
+        System.out.println();
+    }
+}
