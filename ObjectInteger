@@ -31,6 +31,7 @@ public class Main {
         System.out.println("Czy obiekt a jest równy obiektowi b? " + a.equals(b));
         System.out.println("Czy obiekt a jest równy obiektowi c? "  + a.equals(c));
         System.out.println("Porówanie obiektu a z obiktem c  " + a.compareTo(c));
-        System.out.println("Porówanie obiektu a z obiktem d " + c.compareTo(d));
+        System.out.println("Porówanie obiektu c z obiktem d " + c.compareTo(d));
+        System.out.println("Porówanie obiektu d z obiktem c " + d.compareTo(c));
     }
 }
