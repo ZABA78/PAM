@@ -1,0 +1,11 @@
+//dekodowanie
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        byte[] kod = {115,122,121,102,114};
+        System.out.println("Ciąg bajtów" + Arrays.toString(kod));
+        String wynik = new String(kod);
+        System.out.println("Tekst: " + wynik);
+
+    }
+}
