@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+     System.out.println("Wybrane stałe i metody statyczne klasy Integer\n");
+     System.out.println("Wartość minimalna typu int " + Integer.MIN_VALUE);
+     System.out.println("Wartość maksymalna typu int " + Integer.MAX_VALUE);
+     System.out.println("Rozmiar (w bitach typu int " + Integer.SIZE);
+     int a = 179;
+     System.out.println("Liczba całkowita a = "+a+"zapis (ciąg cyfr):");
+     System.out.println("w systemie binarnym "+ Integer.toBinaryString(a));
+     System.out.println("w systemie ósemkowym " + Integer.toOctalString(a));
+     System.out.println("w systemie szesnastkowym " + Integer.toHexString(a));
+     System.out.println("w systemie dziesiątkowym " + Integer.toString(a));
+     System.out.println("w systemie czwórkowym " + Integer.toString(a,4));
+     int b = Integer.parseInt(("-177"));
+     System.out.println("b = "+b);
+     int c = Integer.parseInt("-177",8);
+     System.out.println("c = "+c);
+     System.out.println("Metoda signum(): ");
+     System.out.println("Znak liczby a: " + Integer.signum(a));
+     System.out.println("Znak liczby b: " + Integer.signum(b));
+     System.out.println("Znak liczby 0: " + Integer.signum(0));
+
+
+    }
+}
