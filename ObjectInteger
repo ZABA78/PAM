@@ -1,31 +1,36 @@
 //ObjectInteger
 public class Main {
     public static void main(String[] args) {
-    System.out.println("Wybrane metody obiektów klasy Integer\n");
-    Integer a = new Integer(1024);
-    Integer b = new Integer("02000");
-    Integer c = Integer.decode("02000");
-    Integer d = Integer.decode("0x2000");
+        System.out.println("Wybrane metody obiektów klasy Integer\n");
+        Integer a = new Integer(1024);
+        Integer b = new Integer("02000");
+        Integer c = Integer.decode("02000");
+        Integer d = Integer.decode("0x2000");
 
-    System.out.println("a= "+a);
-    System.out.println("b= "+b);
-    System.out.println("c= "+c);
-    System.out.println("d= "+d);
+        System.out.println("a = "+a);
+        System.out.println("b = "+b);
+        System.out.println("c = "+c);
+        System.out.println("d = "+d);
 
-    System.out.println("Czy obiekt a jest równy obiektowi b? || "+a.equals(b));
-    System.out.println("Czy obiekt a jest równy obiektowi c? || "+a.equals(c));
-    System.out.println("Porównanie obiektu a z obiektem c? "+a.compareTo(c));
-    System.out.println("Porównanie obiektu c z obiektem d? "+d.compareTo(d));
-    System.out.println("Porównanie obiektu d z obiektem c? "+c.compareTo(c));
+        System.out.println("Czy obiekt a jest równy obiektowi b? || "+a.equals(b));
+        System.out.println("Czy obiekt a jest równy obiektowi c? || "+a.equals(c));
+        System.out.println("Porównanie obiektu a z obiektem c? "+a.compareTo(c));
+        System.out.println("Porównanie obiektu c z obiektem d? "+d.compareTo(d));
+        System.out.println("Porównanie obiektu d z obiektem c? "+c.compareTo(c));
 
-    a = Integer.valueOf(1000);
-    b = Integer.valueOf("1000");
-    c = Integer.valueOf("1000", 2);
-    d = Integer.valueOf("1000", 16);
+        a = Integer.valueOf(1000);
+        b = Integer.valueOf("1000");
+        c = Integer.valueOf("1000", 2);
+        d = Integer.valueOf("1000", 16);
 
-    System.out.println("a= "+a);
-    System.out.println("b= "+b);
-    System.out.println("c= "+c);
-    System.out.println("d= "+d);
+        System.out.println("a = "+a);
+        System.out.println("b = "+b);
+        System.out.println("c = "+c);
+        System.out.println("d = "+d);
+
+        System.out.println("Czy obiekt a jest równy obiektowi b? " + a.equals(b));
+        System.out.println("Czy obiekt a jest równy obiektowi c? "  + a.equals(c));
+        System.out.println("Porówanie obiektu a z obiktem c  " + a.compareTo(c));
+        System.out.println("Porówanie obiektu a z obiktem d " + c.compareTo(d));
     }
 }
