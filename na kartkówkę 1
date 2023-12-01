@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        boolean[] bool = {false, true};
+        System.out.println("Implikacja - jeżeli p, to q");
+        System.out.println("p\tq\t=>q");
+        for(boolean p: bool)
+            for(boolean q: bool)
+                System.out.println(p+"\t"+q+"\t" + (Boolean.valueOf(p).compareTo(q)<1));
+        System.out.println();
+        }
+    }
