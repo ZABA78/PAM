@@ -1,0 +1,15 @@
+public class Main {
+    static boolean impl(boolean p ,boolean q){
+        return(Boolean.valueOf(p).compareTo(q)<1);
+    }
+    public static void main(String[] args) {
+        boolean[] bool = {false, true};
+        System.out.println("Implikacja - jeżeli p, to q");
+        System.out.println("p\tq\tp");
+        for(boolean p: bool)
+            for(boolean q: bool)
+                System.out.println(p+"\t"+q+"\t"+impl(p,q));
+
+
+        }
+    }
