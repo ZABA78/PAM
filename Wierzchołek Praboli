@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Obliczenie wspolrzednych wierzcholka paraboli");
+        System.out.println("Podaj wspolcznniki trojmianu kwadratiwegi oddzielonego odstepami: ");
+        double a,b,c;
+        Scanner input = new Scanner(System.in);
+        a = input.nextDouble();
+        b = input.nextDouble();
+        c = input.nextDouble();
+        input.close();
+
+        double delta = b*b-4*a*c;
+        StringBuilder point = new StringBuilder("Wierchołek paraboli (");
+        point.append(-b/(2*a)).append(", ").append(-delta/(4*a)).append(")");
+        System.out.println(point);
+    }
+}
