@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    System.out.println("Najmniejsza wspólna wielokrotność");
+    System.out.println("Podaj dwie liczby naturalne");
+    Scanner input = new Scanner(System.in);
+    int m,n;
+
+    do{
+    System.out.println("m = ");
+    m = input.nextInt();
+    }while(m<0);
+
+    do{
+        System.out.println("n = ");
+        n = input.nextInt();
+    }while(n<0);
+    input.close();
+    int nww = m;
+    int i =0;
+    while(nww%n!=0){System.out.println(++i);
+        nww += m;}
+    System.out.printf("NWW(m,n) = %d.\n", nww);
+    }
+}
