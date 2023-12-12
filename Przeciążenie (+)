@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+class Print
+{
+    private:
+    int number;
+
+    public:
+        Print(int p_number)
+        {
+            number = p_number;
+        }
+        void operator + ()
+        {
+
+            number += 5;
+        }
+        void displayNumber()
+        {
+            cout<< "Liczba: "<<number<<endl;
+        }
+};
+
+
+int main()
+{
+    Print p1(5);
+    p1.displayNumber();
+    +p1;
+        p1.displayNumber();
+    return 0;
+}
