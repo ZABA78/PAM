@@ -1,0 +1,33 @@
+
+public class Main {
+    public static void main(String[] args) {
+        int[] tablica = {64, 34, 25, 12, 22, 11, 90};
+        sortujTablice(tablica);
+
+        System.out.println("\nTablica po sortowaniu:");
+        wyswietlTablice(tablica);
+    }
+
+
+    public static void sortujTablice(int[] tablica) {
+        int n = tablica.length;
+
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (tablica[j] > tablica[j + 1]) {
+                    int temp = tablica[j];
+                    tablica[j] = tablica[j + 1];
+                    tablica[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+
+    public static void wyswietlTablice(int[] tablica) {
+        for (int i = 0; i < tablica.length; i++) {
+            System.out.print(tablica[i] + " ");
+        }
+    }
+}
