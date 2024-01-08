@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+import static java.lang.Math.abs;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double r1,r2;
+        do {
+            System.out.print("Podaj promień zewnętrzny, R = ");
+            r2 = input.nextDouble();
+            if(r2 <= 0){
+                System.out.println("Promień powinien być dodatni!");
+            }
+        } while(r2 <= 0);
+
+        do {
+            System.out.print("Podaj promień wewnętrzny, r = ");
+            r1 = input.nextDouble();
+            if(r1 <= 0){
+                System.out.println("Promień powinien być dodatni!");
+            }
+            if(r1 == r2){
+                System.out.println("Promienie muszą być różne!");
+            }
+        } while(r1 <= 0 || r1 == r2);
+
+        input.close();
+        System.out.printf("Pole pierścienia P = %f\n",Math.PI*abs(r2*r2-r1*r1));
+
+    }
+}
