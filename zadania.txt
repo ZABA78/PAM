@@ -1,0 +1,204 @@
+Poniżej masz zadanie, napisz kod bez komentarzy, nazwy zmiennych i funkcji po polsku, i staraj się napisać jak najbardziej przejrzysty kod
+
+kalkulator java
+
+public class Kalkulator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj pierwszą liczbę:");
+        double liczba1 = scanner.nextDouble();
+
+        System.out.println("Podaj drugą liczbę:");
+        double liczba2 = scanner.nextDouble();
+
+        System.out.println("Wybierz operację (1 - Dodawanie, 2 - Odejmowanie, 3 - Mnożenie, 4 - Dzielenie):");
+        int operacja = scanner.nextInt();
+
+        double wynik = 0;
+
+        switch (operacja) {
+            case 1:
+                wynik = liczba1 + liczba2;
+                break;
+            case 2:
+                wynik = liczba1 - liczba2;
+                break;
+            case 3:
+                wynik = liczba1 * liczba2;
+                break;
+            case 4:
+                if (liczba2 != 0) {
+                    wynik = liczba1 / liczba2;
+                } else {
+                    System.out.println("Nie można dzielić przez zero.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Nieprawidłowa operacja.");
+                return;
+        }
+
+        System.out.println("Wynik operacji: " + wynik);
+    }
+}
+
+
+
+Sortowanie tablicy metodą wybierania w java
+
+public class SortowanieWybieranie {
+    public static void main(String[] args) {
+        int[] tablica = {64, 34, 25, 12, 22, 11, 90};
+
+        for (int i = 0; i < tablica.length - 1; i++) {
+            int indeksMin = i;
+
+            for (int j = i + 1; j < tablica.length; j++) {
+                if (tablica[j] < tablica[indeksMin]) {
+                    indeksMin = j;
+                }
+            }
+
+            int temp = tablica[indeksMin];
+            tablica[indeksMin] = tablica[i];
+            tablica[i] = temp;
+        }
+
+        System.out.println("Posortowana tablica:");
+        for (int element : tablica) {
+            System.out.print(element + " ");
+        }
+    }
+}
+
+
+Sorotwanie tablic
+
+public class SortowanieTablic {
+    public static void main(String[] args) {
+        int[] tab = {64, 34, 25, 12, 22, 11, 90};
+
+        for (int i = 0; i < tab.length - 1; i++) {
+            for (int j = 0; j < tab.length - i - 1; j++) {
+                if (tab[j] > tab[j + 1]) {
+                    int temp = tab[j];
+                    tab[j] = tab[j + 1];
+                    tab[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("Posortowana tablica:");
+        for (int element : tab) {
+            System.out.print(element + " ");
+        }
+    }
+}
+
+
+
+Oblicznie kwadratu dowolnej liczby
+
+import java.util.Scanner;
+
+public class KwadratLiczby {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj liczbę:");
+        double liczba = scanner.nextDouble();
+
+        double kwadrat = liczba * liczba;
+
+        System.out.println("Kwadrat liczby wynosi: " + kwadrat);
+    }
+}
+
+
+NWW
+
+
+java
+Copy code
+import java.util.Scanner;
+
+public class NWW {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj pierwszą liczbę:");
+        int a = scanner.nextInt();
+
+        System.out.println("Podaj drugą liczbę:");
+        int b = scanner.nextInt();
+
+        int wieksza = Math.max(a, b);
+        int mniejsza = Math.min(a, b);
+
+        int nww = 0;
+        int i = 1;
+
+        while (true) {
+            nww = wieksza * i;
+            if (nww % mniejsza == 0) {
+                break;
+            }
+            i++;
+        }
+
+        System.out.println("NWW wynosi: " + nww);
+    }
+}
+
+
+NWD
+
+import java.util.Scanner;
+
+public class NWD {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj pierwszą liczbę:");
+        int a = scanner.nextInt();
+
+        System.out.println("Podaj drugą liczbę:");
+        int b = scanner.nextInt();
+
+        while (a != b) {
+            if (a > b) {
+                a -= b;
+            } else {
+                b -= a;
+            }
+        }
+
+        System.out.println("NWD wynosi: " + a);
+    }
+}
+
+
+
+Prawa d'morgana
+
+import java.util.Scanner;
+
+public class PrawaDeMorgana {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj wartość logiczną P (true/false):");
+        boolean p = scanner.nextBoolean();
+
+        System.out.println("Podaj wartość logiczną Q (true/false):");
+        boolean q = scanner.nextBoolean();
+
+        boolean wynikAnd = !(p && q);
+        boolean wynikOr = (!p || !q);
+
+        System.out.println("Wynik negacji iloczynu logicznego (prawo d'Morgana): " + wynikAnd);
+        System.out.println("Wynik negacji sumy logicznej (prawo d'Morgana): " + wynikOr);
+    }
+}
